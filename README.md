@@ -1,4 +1,4 @@
 headline-parser
 ===============
 
-Determines the most relevant keywords from an article headline
+Considers article context to determine the most relevant keywords in a headline.
