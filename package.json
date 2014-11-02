@@ -4,7 +4,7 @@
   "description": "Determines the most relevant keywords from an article headline",
   "main": "headline-parser.js",
   "scripts": {
-    "test": "findKeywords('How to be awesome at life', 'Experts agree, life is definitely a great thing to be awesome at. So much awesome.', 2)"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/TessMyers/headline-parser/issues"
   },
-  "homepage": "https://github.com/TessMyers/headline-parser"
+  "homepage": "https://github.com/TessMyers/headline-parser",
+  "dependencies": {
+    "keyword-extractor": "0.0.10"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
+  }
 }
