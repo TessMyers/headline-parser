@@ -9,16 +9,6 @@ A simple [NPM package](https://www.npmjs.org/package/headline-parser) that deter
   
 Use the `--save` flag to include the module in your package.json
   
-## Running tests
-
-Install the development dependencies by running the following command:
-
-    $ npm install
-  
-To run tests:
-
-    $ npm test
-  
 ## Usage
 
 Require the parser
@@ -28,7 +18,7 @@ var headline_parser = require("headline-parser");
 
 // Declare variables for your headline and article summary. These have been edited to provide a good example.
 
-var head = 'China successfully develops drone defense system';
+var headline = 'China successfully develops drone defense system';
 
 var body = 'china has tested a self-developed laser defense system against small-scale low-altitude drones, state media said on Sunday. Reportedly, the drone defense is designed to destroy small-scale drones flying within an altitude of 500 meters and at speeds below 50 meters per second. In addition to the drone network, china has developed stealth jets and has built one aircraft carrier.';
 
@@ -52,6 +42,16 @@ findKeywords() accepts four arguments, of which the last two are optional.
 | (optional) n | Number of top keywords desired. If left out, the parser will return all keywords sorted by relevance. | Integer |
 | (optional) args | Takes an object containing parameters for the [keyword-extractor module](https://www.npmjs.org/package/keyword-extractor) used to pull keywords from the headline. Default is {language:"english", return_changed_case:true} | Object (see [docs](https://www.npmjs.org/package/keyword-extractor))|
 
+## Running tests
+
+Install the development dependencies by running the following command:
+
+    $ npm install
+  
+To run tests:
+
+    $ npm test
+  
 # How does it work?
 
 It's pretty simple. This parser uses the [keyword-extractor](https://www.npmjs.org/package/keyword-extractor) module to obtain keywords from a headline (all non-stopwords), then sorts those words by how many times each word appears in the article body provided. For example, this is a great tool to use with the Twitter API if you plan to search or stream tweets that relate to a specific news article.
