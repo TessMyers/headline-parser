@@ -4,7 +4,7 @@
   "description": "Determines the most relevant keywords from an article headline",
   "main": "headline-parser.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
