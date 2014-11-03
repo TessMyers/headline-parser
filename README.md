@@ -56,7 +56,7 @@ findKeywords() accepts four arguments, of which the last two are optional.
 
 It's pretty simple. This parser uses the [keyword-extractor](https://www.npmjs.org/package/keyword-extractor) module to obtain keywords from a headline (all non-stopwords), then sorts those words by how many times each word appears in the article body provided. For example, this is a great tool to use with the Twitter API if you plan to search or stream tweets that relate to a specific news article.
 
-Some things to note: The module will not count partial appearances of keywords, or compounded keywords. For instance, if one of your headline keywords is ['china'], then neither "China", "china's" or "Indochina" will be counted as an appearance of that keyword. Additionally, unless the `args` object is supplied with  a `return_changed_case: false` parameter, the module will count only for lowercase appearances of the word.
+Some things to note: The module will not count partial appearances of keywords, or compounded keywords. For instance, if one of your headline keywords is ['china'], then neither "China", "china's" or "Indochina" will be counted as an appearance of that keyword. Additionally, unless the `args` object is supplied with  a `return_changed_case: false` parameter, the module will count only the lowercase appearances of the word.
 
 
 
