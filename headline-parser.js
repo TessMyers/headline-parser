@@ -1,7 +1,8 @@
 var extractor = require('keyword-extractor');
 
-var findKeywords = function( headline, body, n, keywordArgs, returnNonMathched ){
+var findKeywords = function( headline, body, n, returnNonMathched, keywordArgs ){
   keywordArgs = keywordArgs || { language:"english", return_changed_case:true };
+  returnNonMatched = returnNonMatched || false;
 
   body = body.split(' ');
 
