@@ -1,6 +1,6 @@
 var extractor = require('keyword-extractor');
 
-var findKeywords = function( headline, body, n, returnNonMathched, keywordArgs ){
+var findKeywords = function( headline, body, n, returnNonMatched, keywordArgs ){
   keywordArgs = keywordArgs || { language:"english", return_changed_case:true };
   returnNonMatched = returnNonMatched || false;
 
@@ -29,7 +29,7 @@ var findKeywords = function( headline, body, n, returnNonMathched, keywordArgs )
   // If no keywords have been mentioned, and 'returnNonMathched == true' return non matched keywords from headline
   var aboveZero = Object.keys(keywordCount).filter(function(key){ return keywordCount[key] > 0; })
 
-  if (Object.keys(keywordCount).length > 1 && aboveZero.length < 1 && returnNonMathched) {
+  if (Object.keys(keywordCount).length > 1 && aboveZero.length < 1 && returnNonMatched) {
     var unMatchedKeys = keywordArray.join(', ');
     return unMatchedKeys;
   }
