@@ -1,6 +1,6 @@
 var extractor = require('keyword-extractor');
 
-var findKeywords = function( headline, body, n, keywordArgs ){
+var findKeywords = function( headline, body, n, keywordArgs, returnNonMathched ){
   keywordArgs = keywordArgs || { language:"english", return_changed_case:true };
 
   body = body.split(' ');
@@ -25,12 +25,12 @@ var findKeywords = function( headline, body, n, keywordArgs ){
     }
   }
 
-  // If no keywords have been mentioned, return an error
+  // If no keywords have been mentioned, and 'returnNonMathched == true' return non matched keywords from headline
   var aboveZero = Object.keys(keywordCount).filter(function(key){ return keywordCount[key] > 0; })
 
   if (Object.keys(keywordCount).length > 1 && aboveZero.length < 1) {
-    var message = 'Sorry, this headline appears to be completely irrelevant to the article body. Here are your keywords anyway: ' + keywordArray.join(', ');
-    return message;
+    var unSortedKeys = keywordArray.join(', ');
+    return unSortedKeys;
   }
 
 
