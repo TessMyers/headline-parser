@@ -41,7 +41,7 @@ findKeywords() accepts four arguments, of which the last two are optional.
 | body | Context from the article. May be the entire article body, or just a few sample sentences. The more context, the greater the accuracy of the parser.| String|
 | (optional) n | Number of top keywords desired. If left out, the parser will return all keywords sorted by relevance. | Integer |
 | (optional) args | Takes an object containing parameters for the [keyword-extractor module](https://www.npmjs.org/package/keyword-extractor) used to pull keywords from the headline. Default is {language:"english", return_changed_case:true} | Object (see [docs](https://www.npmjs.org/package/keyword-extractor))|
-| (optional) returnNonMatched | Wether or not to return keywords from headline when no matches in body. If left out, and no match, the parser will not return any keywords. | Boolean |
+| (optional) returnNonMatched | Whether or not to return keywords from headline when no matches in body. If left out, and no match, the parser will default to {returnNonMatched:false} and not return any keywords. | Boolean |
 
 ## Running tests
 
