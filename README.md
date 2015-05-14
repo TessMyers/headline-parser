@@ -33,15 +33,15 @@ var important_keywords = headline_parser.findKeywords(headline, body, 3);
 
 findKeywords() accepts four arguments, of which the last two are optional. 
 
-    .findKeywords(headline, body [, n][, args]);
+    .findKeywords(headline, body [, n][, args][, returnNonMatched]);
 
 | Argument name | Description | Permitted values |
 |---------------|-------------|------------------|
 | headline| Headline of article | String|
 | body | Context from the article. May be the entire article body, or just a few sample sentences. The more context, the greater the accuracy of the parser.| String|
 | (optional) n | Number of top keywords desired. If left out, the parser will return all keywords sorted by relevance. | Integer |
-| (optional) returnNonMatched | Wether or not to return keywords from headline when no matches in body. If left out, and no match, the parser will not return any keywords. | Boolean |
 | (optional) args | Takes an object containing parameters for the [keyword-extractor module](https://www.npmjs.org/package/keyword-extractor) used to pull keywords from the headline. Default is {language:"english", return_changed_case:true} | Object (see [docs](https://www.npmjs.org/package/keyword-extractor))|
+| (optional) returnNonMatched | Wether or not to return keywords from headline when no matches in body. If left out, and no match, the parser will not return any keywords. | Boolean |
 
 ## Running tests
 
@@ -58,8 +58,3 @@ To run tests:
 It's pretty simple. This parser uses the [keyword-extractor](https://www.npmjs.org/package/keyword-extractor) module to obtain keywords from a headline (all non-stopwords), then sorts those words by how many times each word appears in the article body provided. For example, this is a great tool to use with the Twitter API if you plan to search or stream tweets that relate to a specific news article.
 
 Some things to note: The module will not count partial appearances of keywords, or compounded keywords. For instance, if one of your headline keywords is ['china'], then neither "China", "china's" or "Indochina" will be counted as an appearance of that keyword. Additionally, unless the `args` object is supplied with  a `return_changed_case: false` parameter, the module will count only the lowercase appearances of the word.
-
-
-
-
-

@@ -63,8 +63,11 @@ describe('findKeywords', function() {
     findKeywords(stubs[1].headline, stubs[1].body, null, stubs[1].args, null).should.eql(['final','exclamation','absolutely']);
   });
 
-  it('Should return no keywords since returnNonMatched defaults to false', function() {
+  it('Should return no keywords since returnNonMatched is set to to false', function() {
     findKeywords(stubs[3].headline, stubs[3].body, stubs[3].n, stubs[3].args, stubs[3].returnNonMatched).should.eql([]);
+  });
+  it('Should return no keywords since returnNonMatched defaults to false', function() {
+    findKeywords(stubs[3].headline, stubs[3].body, stubs[3].n, stubs[3].args, null).should.eql([]);
   });
   it('Should return keywords even if no match since returnNonMatched is true', function() {
     findKeywords(stubs[3].headline, stubs[3].body, stubs[3].n, stubs[3].args, true).should.eql(['imperative','otter','shenanigans']);
