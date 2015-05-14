@@ -26,12 +26,12 @@ var findKeywords = function( headline, body, n, returnNonMatched, keywordArgs ){
     }
   }
 
-  // If no keywords have been mentioned, and 'returnNonMathched == true' return non matched keywords from headline
+  // If no keywords have been mentioned, and 'returnNonMatched == true' return non matched keywords from headline
   var aboveZero = Object.keys(keywordCount).filter(function(key){ return keywordCount[key] > 0; })
 
   if (Object.keys(keywordCount).length > 1 && aboveZero.length < 1 && returnNonMatched) {
-    var unMatchedKeys = keywordArray.join(', ');
-    return unMatchedKeys;
+    var nonMatchedKeys = keywordArray.join(', ');
+    return nonMatchedKeys;
   }
 
 
