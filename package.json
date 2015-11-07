@@ -1,6 +1,6 @@
 {
-  "name": "headline-parser",
-  "version": "1.0.0",
+  "name": "eklem-headline-parser",
+  "version": "1.0.2",
   "description": "Determines the most relevant keywords from an article headline",
   "main": "headline-parser.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TessMyers/headline-parser.git"
+    "url": "https://github.com/eklem/eklem-headline-parser.git"
   },
   "keywords": [
     "parse",
@@ -19,12 +19,12 @@
     "relevance",
     "context"
   ],
-  "author": "tmyers <tcymyers@gmail.com> (http://www.tessmyers.com/)",
+  "author": "eklem <espen.klem@gmail.com> (http://lab.klemespen.com/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TessMyers/headline-parser/issues"
+    "url": "https://github.com/eklem/eklem-headline-parser/issues"
   },
-  "homepage": "https://github.com/TessMyers/headline-parser",
+  "homepage": "https://github.com/eklem/eklem-headline-parser",
   "dependencies": {
     "keyword-extractor": "0.0.10"
   },
